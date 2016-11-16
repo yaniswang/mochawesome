@@ -72,6 +72,11 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest(config.buildFontsDir));
 });
 
+gulp.task('imgs', function () {
+  return gulp.src(path.join(config.srcImgsDir, '*'))
+    .pipe(gulp.dest(config.buildImgsDir));
+});
+
 gulp.task('styles', function () {
   return gulp.src(path.join(config.srcLessDir, '[^_]*.less'))
     .pipe(plumber({errorHandler: gutil.log}))
@@ -208,6 +213,6 @@ gulp.task('build', ['lint'], function () {
 
 gulp.task('lint', ['svrlint', 'felint']);
 
-gulp.task('assemble', ['fonts', 'styles', 'clientScripts', 'vendorScripts', 'templates']);
+gulp.task('assemble', ['fonts', 'imgs', 'styles', 'clientScripts', 'vendorScripts', 'templates']);
 
 gulp.task('default', ['test']);
