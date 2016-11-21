@@ -1,6 +1,6 @@
 {
   "name": "mochawesome-uirecorder",
-  "version": "1.5.6",
+  "version": "1.5.7",
   "description": "A Gorgeous HTML/CSS Reporter for Mocha.js",
   "scripts": {
     "test": "gulp build"
@@ -30,7 +30,8 @@
     "moment": "^2.9.0",
     "ncp": "^1.0.1",
     "node-uuid": "^1.4.1",
-    "opener": "^1.4.1"
+    "opener": "^1.4.1",
+    "xml": "^1.0.1"
   },
   "peerDependencies": {
     "mocha": "*"
