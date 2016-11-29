@@ -1,6 +1,6 @@
 {
   "name": "mochawesome-uirecorder",
-  "version": "1.5.11",
+  "version": "1.5.12",
   "description": "A Gorgeous HTML/CSS Reporter for Mocha.js",
   "scripts": {
     "test": "gulp build"
