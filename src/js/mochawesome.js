@@ -38,8 +38,11 @@
     this.$body        = $('body');
     this.$navbar      = $('.navbar');
     this.$navOpenBtn  = $('.nav-menu-btn.open-menu');
+    this.$hostsOpenBtn  = $('.nav-menu-btn.open-hosts');
     this.$navCloseBtn = $('.close-menu');
+    this.$hostsCloseBtn = $('.close-hosts');
     this.$navMenu     = $('.nav-menu-wrap');
+    this.$hosts     = $('.hosts-wrap');
     this.$navMenuLink = $('.nav-menu-item-link');
     this.$summary     = $('.summary');
     this.$statusBar   = $('.statusbar');
@@ -61,7 +64,9 @@
   Mochawesome.prototype.initialize = function () {
     this.$filterBtns.on('click', self._onFilterClick.bind(self));
     this.$navOpenBtn.on('click', self.openNavMenu.bind(self));
+    this.$hostsOpenBtn.on('click', self.openHosts.bind(self));
     this.$navCloseBtn.on('click', self.closeNavMenu.bind(self));
+    this.$hostsCloseBtn.on('click', self.closeHosts.bind(self));
     this.$navMenuLink.on('click', self.goToSuite.bind(self));
     if (this.windowWidth > this.breakpoints.sm) {
       this.listenToScroll(true);
@@ -120,8 +125,20 @@
     this.$navMenu.addClass('open');
   };
 
+  Mochawesome.prototype.openHosts = function () {
+    var textarea = this.$hosts.find('textarea');
+    var width = textarea.width();
+    var height = textarea.height();
+    textarea.css({margin:'-'+(height / 2)+'px 0 0 -'+(width / 2)+'px'});
+    this.$hosts.addClass('open').focus();
+  };
+
   Mochawesome.prototype.closeNavMenu = function () {
     this.$navMenu.removeClass('open');
+  };
+
+  Mochawesome.prototype.closeHosts = function () {
+    this.$hosts.removeClass('open');
   };
 
   Mochawesome.prototype.goToSuite = function (e) {

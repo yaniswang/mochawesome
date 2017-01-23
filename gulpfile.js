@@ -168,6 +168,7 @@ gulp.task('fiveby', function () {
 });
 
 gulp.task('test', function () {
+  console.log(mochaOpts)
   return gulp.src(testPaths.basic)
     .pipe(mocha(mochaOpts))
     .on('error', console.warn.bind(console));

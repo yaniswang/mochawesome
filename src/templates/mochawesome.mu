@@ -23,7 +23,8 @@
               {{> _quickSummary}}
             {{/stats}}
           </div>
-          <button class="nav-menu-btn open-menu"><i class="icon-menu"></i></button>
+          <button class="nav-menu-btn open-hosts" title="Hosts"><i class="icon-hosts"></i></button>
+          <button class="nav-menu-btn open-menu" title="Menu"><i class="icon-menu"></i></button>
         </div>
       </div>
     </div>
@@ -68,6 +69,13 @@
           {{/suites}}
         </ul>
       </nav>
+    </div>
+
+    <!-- Hosts -->
+    <div class="hosts-wrap">
+      <div class="hosts-overlay close-hosts"></div>
+      <div class=""></div>
+      <textarea>{{hosts}}</textarea>
     </div>
 
     <!-- Scripts -->
