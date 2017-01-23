@@ -23,7 +23,9 @@
               {{> _quickSummary}}
             {{/stats}}
           </div>
-          <button class="nav-menu-btn open-hosts" title="Hosts"><i class="icon-hosts"></i></button>
+          {{#if hosts}}
+            <button class="nav-menu-btn open-hosts" title="Hosts"><i class="icon-hosts"></i></button>
+          {{/if}}
           <button class="nav-menu-btn open-menu" title="Menu"><i class="icon-menu"></i></button>
         </div>
       </div>
