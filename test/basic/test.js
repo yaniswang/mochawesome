@@ -1,4 +1,5 @@
 var should = require('should');
+var fs = require('fs');
 
 describe('sample/测试_spec : chrome', function () {
   it('url: http://www.baidu.com', function(){
@@ -14,6 +15,10 @@ describe('sample/测试_spec : chrome', function () {
   });
   
   it('sendKeys: mp3{ENTER}', function(){
+      
+  });
+
+  it('imgdiff: u1 ( #u1 )', function(){
       
   });
 });
@@ -34,4 +39,5 @@ describe('sample/测试_spec : ie 11', function () {
   it('sendKeys: mp3{ENTER}', function(){
       
   });
+
 });

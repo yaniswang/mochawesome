@@ -10,6 +10,7 @@
       <button class="btn btn-link btn-sm toggle-btn toggle-code collapsed" data-toggle="collapse" data-target="#{{uuid}} > .test-code.collapse">Code</button>
       <span class="test-duration {{speed}}">{{formatDuration duration}}</span>
 {{#if screenshot}}      <a href="{{screenshot}}" target="_blank" title="{{title}}" data-lightbox="{{parentTitle}}" style="margin:0 5px;float:left;"><img src="img/picture.png" width="20" height="20" /></a>
+{{/if}}{{#if imgdiff}} <a href="{{imgdiff}}" target="_blank" title="{{title}}" data-lightbox="{{parentTitle}}" style="margin:0 5px;float:left;"><img src="img/imgdiff.png" width="20" height="20" /></a>
 {{/if}}    </div>
     {{/pending}}
   </div>
