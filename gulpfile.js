@@ -168,6 +168,9 @@ gulp.task('fiveby', function () {
 });
 
 gulp.task('test', function () {
+  mochaOpts.reporterOptions = {
+    copyShotOnlyFail: true
+  };
   console.log(mochaOpts)
   return gulp.src(testPaths.basic)
     .pipe(mocha(mochaOpts))
