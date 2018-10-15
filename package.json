@@ -1,6 +1,6 @@
 {
   "name": "mochawesome-uirecorder",
-  "version": "1.5.23",
+  "version": "1.5.24",
   "description": "A Gorgeous HTML/CSS Reporter for Mocha.js",
   "scripts": {
     "test": "gulp build"
@@ -9,7 +9,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yaniswang/mochawesome"
+    "url": "https://github.com/stngle/mochawesome"
   },
   "keywords": [
     "mocha",
